@@ -3,13 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>input</title>
+    <style>
+      body {
+        margin:0;
+        padding:0;
+        background:url("https://unsplash.com/@greedwolf97?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
+        display:flex;
+        justify-content:center;
+      }
+      div {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:20vh;
+        width:53vw;
+        background:rgba(0, 0, 0, 0.6);
+        font: Norse bold;
+      }
+      form {
+        background:#1F1F1F;
+        width:50vw;
+        font:Roboto;
+        justify-self:right;
+      }
+      input {
+        border: 1px solid blue;
+        border-radius:10px;
+      }
+      input:invalid {
+        border: 2.5px solid red;
+        transition:1s;
+        transform:translateZ(30deg);
+      }
+    </style>
   </head>
   <body>
+    <div>
+      <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/o">
+      <p>project prime</p>
+    </div>
     <form class="" action="input.html" method="post">
-      <input type="text" name="" value=""><br>
-      <input type="date" name="" value=""><br>
-      <input type="file" name="" value=""><br>
-      <input type="range" name="" value="">
+      <input type="text" name="your-name" placeholder="Enter Your Full Name" value="" required>
+      <label for="your-name">Full Name:</label><br>
+      <input type="e-mail" name="email"  placeholder="Enter Your E-mail Address" value="" required>
+      <label for="email">E-mail:</label><br>
+      <input type="password" name="password" placeholder="********" minlength="8" required>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
